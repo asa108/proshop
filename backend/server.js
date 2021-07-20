@@ -3,8 +3,8 @@ const products = require("./data/products");
 
 const app = express();
 
-app.get("/api/products", (req, res) => {
-  res.send("API is ruuning...");
+app.get("/", (req, res) => {
+  res.send("API is ruuning...!!");
 });
 
 app.get("/api/products", (req, res) => {
