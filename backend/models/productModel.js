@@ -1,5 +1,5 @@
-import { timeStamp } from "console";
 import mongoose from "mongoose";
+
 const reviewSchema = mongoose.Schema(
   {
     name: { type: String, required: true },
@@ -60,6 +60,6 @@ const productSchema = mongoose.Schema(
   { timeStamp: true }
 );
 
-const Product = mongoose.model("User", productScheme);
+const Product = mongoose.model("Product", productSchema);
 
 export default Product;

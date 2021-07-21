@@ -1,10 +1,9 @@
-import { timeStamp } from "console";
 import mongoose from "mongoose";
 
 const orderSchema = mongoose.Schema(
   {
     user: {
-      type: mongoose.Schema.Types.ObjecId,
+      type: mongoose.Schema.Types.ObjectId,
       required: true,
       ref: "User",
     },
@@ -22,10 +21,10 @@ const orderSchema = mongoose.Schema(
       },
     ],
     shippingAddress: {
-      adress: { type: Sting, required: ture },
-      city: { type: Sting, required: ture },
-      postalCode: { type: Sting, required: ture },
-      country: { type: Sting, required: ture },
+      adress: { type: String, required: true },
+      city: { type: String, required: true },
+      postalCode: { type: String, required: true },
+      country: { type: String, required: true },
     },
     paymentMethod: {
       type: String,
@@ -79,6 +78,6 @@ const orderSchema = mongoose.Schema(
   { timeStamp: true }
 );
 
-const Order = mongoose.model("User", orderSchema);
+const Order = mongoose.model("Order", orderSchema);
 
 export default Order;
